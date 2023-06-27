@@ -1,0 +1,38 @@
+.contacto{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    
+
+}
+
+.tituloContacto {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.9rem;
+    text-align: center;
+    background-color: #607EAA;
+    align-items: center; 
+    width: 60vw;
+    margin-left: 20vw;
+    border: solid 2px transparent;
+    background-clip: padding-box;
+    
+    
+}
+
+.formRegister {
+    align-items: center;
+        
+}
+
+.camposAcompletar {
+    border-radius: 5px
+            
+    
+}

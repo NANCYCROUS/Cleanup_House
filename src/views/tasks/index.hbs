@@ -1,0 +1,33 @@
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+  <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-12"> <!-- Este div es un contenedor que establece el ancho máximo y otros estilos -->
+
+    <table class="table-fixed w-full"> <!-- Esta tabla tiene un ancho fijo y ocupa todo el ancho disponible -->
+      <thead>  <!-- nombres de las columnas de la tabla tasks -->
+        <tr class="bg-blue-500 text-white">
+          <th class="w-20 py-4 ...">Numero</th>
+          <th class="w-1/4 py-4 ...">Producto</th>
+          <th class="w-1/2 py-4 ...">Descripcion</th>
+          <th class="w-28 py-4 ...">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>  <!--  filas de datos de la tabla -->
+        {{#each tasks}}
+        <tr>
+          <td class="py-3 px-6">{{id}}</td> <!-- muestra id de tarea -->
+          <td class="p-3">{{title}}</td> <!-- muestra quien es el responsable de la tarea -->
+          <td class="p-3 text-center">{{description}}</td> <!-- muestra descripcion de tarea -->
+          <td class="p-3 flex">
+            <form action="/tasks/delete" method="POST" class="mx-2">
+              <input type="hidden" value="{{id}}" name="id">
+              <button class="bg-gray-900 text-white px-3 py-1 rounded-sm" type="submit">
+                <i class="fas fa-trash"></i></button>
+            </form>
+            <a href="/tasks/edit/{{id}}" class="bg-green-500 text-white px-3 py-1 rounded-sm">
+              <i class="fas fa-pen"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

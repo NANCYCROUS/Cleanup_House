@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/contacto.css">
+</head>
+<body>
+
+    {{#if error }}
+    <p>{{error}}</p>
+    {{/if}} 
+
+    
+ <aside class="contacto">   
+   <form action="/contacto/enviar" method="post" class="formRegister">
+        <fieldset class="tituloContacto">   
+            <legend>Contacto</legend>
+            <p>Para cualquier tipo de consulta escrìbenos y a la brevedad nos contactaremos</p>
+            <label for="nombre">Nombre</label>
+            <input class="camposAcompletar" type="text" placeholder="Nombre" name="nombre" id="nombre" required/>
+            <label for="apellido">Apellido</label>
+            <input class="camposAcompletar" type="text" placeholder="Apellido" name="apellido" id="apellido" required/>
+            <label for="email">Correo Electrònico</label>
+            <input class="camposAcompletar" type="email" placeholder="Email" name="email" id="email" required/>
+            <label for="direccion">Direcciòn</label>
+            <input class="camposAcompletar" type="direccion" placeholder="Direcciòn" name="direccion" id="direccion" required/>
+            <label for="localidad">Localidad</label>
+            <input class="camposAcompletar" type="localidad" placeholder="Localidad" name="localidad" id="localidad" required/>
+            <label for="telefono">Telèfono</label>
+            <input class="camposAcompletar" type="telefono" placeholder="Telèfono" name="telefono" id="telefono" required/>  
+            <label for="consulta">Consulta</label>        
+            <textarea class="camposAcompletar" name="consulta" placeholder="Ingrese aquì su Consulta" id="consulta" cols="20" rows="5" maxlength="140"></textarea>          
+
+            <div>
+            <label for="RecibeOfertas"> ¿Quiere recibir nuestras Ofertas Semanales?</label>
+                <select name="RecibeOfertas" id="RecibeOfertas">
+                    <option value="SI">SI</option>
+                    <option value="NO">NO</option>  
+                </select>    
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+                
+        </fieldset>
+     </form>
+    
+</aside>
+         
+  
+</body>
+</html>
